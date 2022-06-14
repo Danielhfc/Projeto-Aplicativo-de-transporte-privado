@@ -180,28 +180,21 @@
     "id": "5034ab03-a540-4e0f-ac23-ad358dcd882d",
     "name": "Ver lista de clientes",
     "commands": [{
-      "id": "a026e7fe-8c57-4592-98e6-2bfe9350b0a3",
+      "id": "75b5d95e-7905-435f-b51e-679d46c4bc0b",
       "comment": "",
       "command": "open",
-      "target": "",
+      "target": "http://localhost/transporte/?acao=home",
       "targets": [],
       "value": ""
     }, {
-      "id": "96b24b94-a88c-4391-8fc8-37d672919883",
+      "id": "0ae1f16f-b72d-4a15-b82f-2f0c871c8c1f",
       "comment": "",
       "command": "setWindowSize",
-      "target": "",
+      "target": "1352x714",
       "targets": [],
       "value": ""
     }, {
-      "id": "80f22e89-5230-4bd5-a25b-41871014a4b2",
-      "comment": "",
-      "command": "close",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c382406e-16c7-4a96-808f-fd2319884e33",
+      "id": "1faff63e-db80-4585-9b37-12854710c19c",
       "comment": "",
       "command": "click",
       "target": "linkText=Ver",
@@ -215,7 +208,7 @@
       ],
       "value": ""
     }, {
-      "id": "5e86f218-043b-4291-a8b7-3218b4f2dce6",
+      "id": "75993748-4d77-4239-8edf-939db70a2135",
       "comment": "",
       "command": "click",
       "target": "css=.nav-link",
@@ -224,18 +217,6 @@
         ["xpath=//li[@id='item-esq']/a", "xpath:idRelative"],
         ["xpath=//a[contains(@href, '?acao=home')]", "xpath:href"],
         ["xpath=//a", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "dbbc8ff2-b940-483f-b6d0-31dc686755a6",
-      "comment": "",
-      "command": "click",
-      "target": "css=p:nth-child(3) > a",
-      "targets": [
-        ["css=p:nth-child(3) > a", "css:finder"],
-        ["xpath=(//a[contains(text(),'Ver')])[2]", "xpath:link"],
-        ["xpath=//a[contains(@href, '?acao=ver&id=4')]", "xpath:href"],
-        ["xpath=//p[2]/a", "xpath:position"]
       ],
       "value": ""
     }]
@@ -248,6 +229,6 @@
     "timeout": 300,
     "tests": ["3baac85b-25fb-4f4a-bc1a-ce2a174a18e5"]
   }],
-  "urls": ["http://localhost/"],
+  "urls": ["http://localhost/", "http://localhost/transporte/?acao=home"],
   "plugins": []
 }

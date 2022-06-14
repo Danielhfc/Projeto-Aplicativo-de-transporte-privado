@@ -7,7 +7,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   $var_email = trim($_POST['email']);
   $var_telefone = trim($_POST['telefone']);
   $var_cpf = trim($_POST['cpf']);
-  $var_senha = trim($_POST['email']);
+  $var_senha = trim($_POST['senha']);
   $sql = "INSERT INTO clientes (nome, email, telefone, cpf, senha) VALUES (?, ?, ?, ?, ?)";
   
   if($stmt = mysqli_prepare($con, $sql)){
