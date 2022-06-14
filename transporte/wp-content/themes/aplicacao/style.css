@@ -1,0 +1,46 @@
+@import "css/reset.css";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", Helvetica, sans-serif;
+}
+
+.mostrar-cliente{
+  padding-top: 50px;
+}
+
+/*inicio Header*/
+.my-header {
+  position: absolute;
+  fill: solid;
+  min-width: 100%;
+}
+
+.navbar {
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar-nav {
+  margin: 0 auto;
+}
+
+#header-link .nav-item.active {
+  border-bottom: 2px solid #006dbb;
+}
+
+.nav-item {
+  margin-right: 25px;
+}
+.nav-item a {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.3125rem;
+}
