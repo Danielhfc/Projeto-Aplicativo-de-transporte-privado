@@ -1,6 +1,6 @@
 <?php 
 
-$nome = $email = $telefone = $senha = '';
+$nome = $email = $telefone = $senha = $veiculo = $placa = '';
 
 if(isset($_POST['id'] ) && !empty($_POST['id'])){
   $id = $_POST['id'];
@@ -9,16 +9,20 @@ if(isset($_POST['id'] ) && !empty($_POST['id'])){
   $var_email = trim($_POST['email']);
   $var_telefone = trim($_POST['telefone']);
   $var_senha = trim($_POST['email']);
+  $var_veiculo = trim($_POST['veiculo']);
+  $var_placa = trim($_POST['placa']);
 
-  $sql = "UPDATE clientes SET nome=?,email=?,telefone=?,senha=? WHERE id=?";
+  $sql = "UPDATE motoristas SET nome=?,email=?,telefone=?,senha=?,veiculo=?,placa=? WHERE id=?";
 
   if($stmt = mysqli_prepare($con, $sql)){
-    mysqli_stmt_bind_param($stmt, "ssssi", $param_nome, $param_email , $param_telefone , $param_senha, $param_id);
+    mysqli_stmt_bind_param($stmt, "ssssssi", $param_nome, $param_email , $param_telefone , $param_senha, $param_veiculo, $param_placa, $param_id);
 
     $param_nome = $var_nome;
     $param_email = $var_email;
     $param_telefone = $var_telefone;
     $param_senha = $var_senha;
+    $param_veiculo = $var_veiculo;
+    $param_placa = $var_placa;
     $param_id = $id;
 
     if(mysqli_stmt_execute($stmt)){
@@ -31,7 +35,7 @@ if(isset($_POST['id'] ) && !empty($_POST['id'])){
   
   $id = trim($_GET['id']);
 
-  $sql = "SELECT * FROM clientes WHERE id = ?";
+  $sql = "SELECT * FROM motoristas WHERE id = ?";
 
     if($stmt = mysqli_prepare($con, $sql)){
       mysqli_stmt_bind_param($stmt, "i", $param_id);
@@ -48,6 +52,8 @@ if(isset($_POST['id'] ) && !empty($_POST['id'])){
           $email = $row['email'];
           $telefone = $row['telefone'];
           $senha = $row['senha'];
+          $veiculo = $row['veiculo'];
+          $placa = $row['placa'];
       } else echo 'error 1';
       
    }else echo 'error2';
@@ -76,6 +82,14 @@ global $wp;
     <div class="form-group">
         <label for="">Senha</label>
         <input type="text" name="senha" class="form-control" value="<?php echo $senha; ?>">
+    </div>
+    <div class="form-group">
+        <label for="">Veiculo</label>
+        <input type="text" name="veiculo" class="form-control" value="<?php echo $veiculo; ?>" required>
+    </div>
+    <div class="form-group">
+        <label for="">Placa do veículo</label>
+        <input type="text" name="placa" class="form-control" value="<?php echo $placa; ?>" required>
     </div>
     <input type="submit" value="Editar">
     <input type="hidden" name="id" value="<?php echo $id; ?>">
