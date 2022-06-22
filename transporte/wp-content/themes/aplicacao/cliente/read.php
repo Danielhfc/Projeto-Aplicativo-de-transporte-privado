@@ -16,7 +16,7 @@
           echo "<p>";
           echo "<b>Nome:</b> " . $row['nome'] . "<br>";
           echo "<b>Email:</b> " . $row['email'] . "<br>";
-          echo "<b>telefone:</b> " . $row['telefone'] . "<br>";
+          echo "<b>Telefone:</b> " . $row['telefone'] . "<br>";
           echo "<b>CPF:</b> " . $row['cpf'] . "<br>";
           echo "</p>";
       } else echo 'error 1';

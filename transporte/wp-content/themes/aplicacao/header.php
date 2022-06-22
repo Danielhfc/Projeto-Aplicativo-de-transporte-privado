@@ -36,7 +36,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav" id="header-link">
         <li class="nav-item" id="item-esq">
-          <a class="nav-link" href="?acao=home">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="transporte/home?acao=home">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="transporte/clientes?acao=clientes">Clientes <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/motoristas?acao=motoristas">Motoristas <span class="sr-only">(current)</span></a>
         </li>
   
     
