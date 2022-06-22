@@ -1,16 +1,15 @@
 <?php 
-$sql = "SELECT * FROM viagens";
+$sql = "SELECT * FROM pagamentos";
 
 if($result = mysqli_query($con, $sql)){
   if(mysqli_num_rows($result) > 0){
     while($row = mysqli_fetch_array($result)){
       
       echo "<tr>";
-      echo "<td>" . $row['cliente'] . "</td>";
-      echo "<td>" . $row['destino'] . "</td>";
+      echo "<td>" . $row['viagem'] . "</td>";
+      echo "<td>" . $row['valor'] . "</td>";
       echo "<td>";
       echo "<a href='?acao=ver&id=" . $row['id'] . "'> Ver</a>";
-      echo "<a href='?acao=pagar&id=" . $row['id'] . "'> Pagar</a>";
       echo "</td>";
       echo "</tr>";
     }

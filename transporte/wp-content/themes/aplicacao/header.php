@@ -41,6 +41,7 @@
           <a class="nav-link" href="transporte/clientes?acao=clientes">Clientes <span class="sr-only">(current)</span></a>
           <a class="nav-link" href="transporte/motoristas?acao=motoristas">Motoristas <span class="sr-only">(current)</span></a>
           <a class="nav-link" href="transporte/viagens?acao=viagens">Viagens <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="transporte/pagamentos?acao=pagamentos">Pagamentos <span class="sr-only">(current)</span></a>
         </li>
   
     
