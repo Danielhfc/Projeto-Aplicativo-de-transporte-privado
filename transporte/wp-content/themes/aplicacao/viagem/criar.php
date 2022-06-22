@@ -1,23 +1,27 @@
 <?php 
 
-$nome = $email = $telefone = $cpf = $senha = '';
+$cliente = $motorista = $origem = $destino = $valor = $data = $comentario = '';
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-  $var_nome = trim($_POST['nome']);
-  $var_email = trim($_POST['email']);
-  $var_telefone = trim($_POST['telefone']);
-  $var_cpf = trim($_POST['cpf']);
-  $var_senha = trim($_POST['senha']);
-  $sql = "INSERT INTO clientes (nome, email, telefone, cpf, senha) VALUES (?, ?, ?, ?, ?)";
+  $var_cliente = trim($_POST['cliente']);
+  $var_motorista = trim($_POST['motorista']);
+  $var_origem = trim($_POST['origem']);
+  $var_destino = trim($_POST['destino']);
+  $var_valor = trim($_POST['valor']);
+  $var_data = trim($_POST['data']);
+  $var_comentario = trim($_POST['comentario']);
+  $sql = "INSERT INTO viagens (cliente, motorista, origem, destino, valor, data, comentario) VALUES (?, ?, ?, ?, ?, ?, ?)";
   
   if($stmt = mysqli_prepare($con, $sql)){
-    mysqli_stmt_bind_param($stmt, "sssss", $param_nome, $param_email , $param_telefone , $param_cpf, $param_senha);
+    mysqli_stmt_bind_param($stmt, "sssssss", $param_cliente, $param_motorista , $param_origem , $param_destino, $param_valor, $param_data, $param_comentario);
 
-    $param_nome = $var_nome;
-    $param_email = $var_email;
-    $param_telefone = $var_telefone;
-    $param_cpf = $var_cpf;
-    $param_senha = $var_senha;
+    $param_cliente = $var_cliente;
+    $param_motorista = $var_motorista;
+    $param_origem = $var_origem;
+    $param_destino = $var_destino;
+    $param_valor = $var_valor;
+    $param_data = $var_data;
+    $param_comentario = $var_comentario;
 
     if(mysqli_stmt_execute($stmt)){
       echo 'Cadastrado com sucesso';
@@ -34,24 +38,32 @@ global $wp;
 
 <form action="" method="POST">
     <div class="form-group">
-        <label for="">Nome</label>
-        <input type="text" name="nome" class="form-control" value="<?php echo $nome; ?>" required>
+        <label for="">Cliente</label>
+        <input type="text" name="cliente" class="form-control" value="<?php echo $cliente; ?>" required>
     </div>
     <div class="form-group">
-        <label for="">Email</label>
-        <input type="email" name="email" class="form-control" value="<?php echo $email; ?>" required>
+        <label for="">Motorista</label>
+        <input type="motorista" name="motorista" class="form-control" value="<?php echo $motorista; ?>" required>
     </div>
     <div class="form-group">
-        <label for="">Telefone</label>
-        <input type="text" name="telefone" class="form-control" value="<?php echo $telefone; ?>" required>
+        <label for="">Origem</label>
+        <input type="text" name="origem" class="form-control" value="<?php echo $origem; ?>" required>
     </div>
     <div class="form-group">
-        <label for="">CPF</label>
-        <input type="text" name="cpf" class="form-control" value="<?php echo $cpf; ?>" required>
+        <label for="">Destino</label>
+        <input type="text" name="destino" class="form-control" value="<?php echo $destino; ?>" required>
     </div>
     <div class="form-group">
-        <label for="">Senha</label>
-        <input type="text" name="senha" class="form-control" value="<?php echo $senha; ?>" required>
+        <label for="">Valor</label>
+        <input type="text" name="valor" class="form-control" value="<?php echo $valor; ?>" required>
+    </div>
+    <div class="form-group">
+        <label for="">Data</label>
+        <input type="text" name="data" class="form-control" value="<?php echo $data; ?>" required>
+    </div>
+    <div class="form-group">
+        <label for="">Comentario</label>
+        <input type="text" name="comentario" class="form-control" value="<?php echo $comentario; ?>" >
     </div>
     <input type="submit" value="Cadastrar">
     <input type="hidden" name="cadastrar" value="1">

@@ -1,6 +1,6 @@
 <?php 
   if(isset($_GET['id']) && !empty(trim($_GET['id']))){
-    $sql = "SELECT * FROM clientes WHERE id = ?";
+    $sql = "SELECT * FROM viagens WHERE id = ?";
 
     if($stmt = mysqli_prepare($con, $sql)){
       mysqli_stmt_bind_param($stmt, "i", $param_id);
@@ -14,10 +14,13 @@
           $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
           echo "<p>";
-          echo "<b>Nome:</b> " . $row['nome'] . "<br>";
-          echo "<b>Email:</b> " . $row['email'] . "<br>";
-          echo "<b>Telefone:</b> " . $row['telefone'] . "<br>";
-          echo "<b>CPF:</b> " . $row['cpf'] . "<br>";
+          echo "<b>Cliente:</b> " . $row['cliente'] . "<br>";
+          echo "<b>Motorista:</b> " . $row['motorista'] . "<br>";
+          echo "<b>Origem:</b> " . $row['origem'] . "<br>";
+          echo "<b>Destino:</b> " . $row['destino'] . "<br>";
+          echo "<b>Valor:</b> R$" . $row['valor'] . "<br>";
+          echo "<b>Data:</b> " . $row['data'] . "<br>";
+          echo "<b>Comentario:</b> " . $row['destino'] . "<br>";
           echo "</p>";
       } else echo 'error 1';
       
