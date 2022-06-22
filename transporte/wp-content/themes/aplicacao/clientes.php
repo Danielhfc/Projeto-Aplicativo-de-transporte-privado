@@ -4,10 +4,7 @@
 
 <?php get_header(); ?>
 
-<div class="mostrar-cliente">
-  <h2>
-    <a href="?acao=criar">Novo Cliente</a>
-  </h2>
+
   
 <?php 
   $con = mysqli_connect("localhost", "root", "", "aplicacao_transporte");
@@ -30,7 +27,24 @@
       require('cliente/excluir.php');
       break;
     default:
-      require('cliente/lista.php');
+    echo "<div class='col-sm-4'>";
+    echo "<a href='?acao=criar'><button  type='button' class='btn btn-info add-new'><i class='fa fa-plus'></i> Adicionar cliente</button></a> </div>";
+  
+
+    echo "<table class='table table-bordered'>";
+    echo "<thead>";
+          echo  "<tr>";
+          echo      "<th>Nome</th>";
+          echo      "<th>Email</th>";
+          echo      "<th>Ações</th>";
+        echo    "</tr>";
+      echo  "</thead>";
+     echo   "<tbody>";
+          require('cliente/lista.php');       
+      echo  "</tbody>";
+    echo "</table>";
+
+      
     break;
   }
 
@@ -38,5 +52,5 @@
 
  
 ?>
-</div>
+
 

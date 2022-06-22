@@ -4,10 +4,16 @@ $sql = "SELECT * FROM clientes";
 if($result = mysqli_query($con, $sql)){
   if(mysqli_num_rows($result) > 0){
     while($row = mysqli_fetch_array($result)){
-      echo "<p>";
-      echo "<b>Nome:</b> " . $row['nome'] . "<a href='?acao=ver&id=" . $row['id'] . "'> Ver</a>" . "<a href='?acao=editar&id=" . $row['id'] . "'> Editar</a>" . "<a href='?acao=excluir&id=" . $row['id'] . "'> Excluir</a>" . "<br>";
-      echo "<b>Email:</b> " . $row['email'] . "<br>";
-      echo "</p>";
+      
+      echo "<tr>";
+      echo "<td>" . $row['nome'] . "</td>";
+      echo "<td>" . $row['email'] . "</td>";
+      echo "<td>";
+      echo "<a href='?acao=ver&id=" . $row['id'] . "'> Ver</a>";
+      echo "<a class='edit' title='Edit' data-toggle='tooltip' href='?acao=editar&id=" . $row['id'] . "'> <i class='material-icons'>&#xE254;</i></a>";
+      echo "<a class='delete' title='Delete' data-toggle='tooltip' href='?acao=excluir&id=" . $row['id'] . "'> <i class='material-icons'>&#xE872;</i></a>" . "<br>";
+      echo "</td>";
+      echo "</tr>";
     }
     
   }else echo 'error';
