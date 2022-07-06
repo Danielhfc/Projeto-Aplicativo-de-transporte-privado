@@ -13,12 +13,36 @@
         if(mysqli_num_rows($result) == 1){
           $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-          echo "<p>";
-          echo "<b>Nome:</b> " . $row['nome'] . "<br>";
-          echo "<b>Email:</b> " . $row['email'] . "<br>";
-          echo "<b>Telefone:</b> " . $row['telefone'] . "<br>";
-          echo "<b>CPF:</b> " . $row['cpf'] . "<br>";
-          echo "</p>";
+          echo'
+          <body>
+          <div class="container-xl">
+            <div class="table-responsive">
+              <div class="table-wrapper">
+                <div class="table-title">
+                  
+                </div>
+                <table class="table table-striped table-hover">
+                  <thead>
+                    <tr>
+                      <th>Nome</th>
+                      <th>Email</th>
+                      <th>Telefone</th>
+                      <th>CPF</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                <tr>
+                  <td> '. $row["nome"] .' </td>
+                  <td> '. $row["email"] .' </td>
+                  <td> '. $row["telefone"] .' </td>
+                  <td> '. $row["cpf"] .' </td>
+              </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </body>
+          ';
       } else echo 'error 1';
       
    }else echo 'error2';

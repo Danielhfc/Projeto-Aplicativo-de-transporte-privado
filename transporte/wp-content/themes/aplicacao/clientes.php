@@ -27,22 +27,38 @@
       require('cliente/excluir.php');
       break;
     default:
-    echo "<div class='col-sm-4'>";
-    echo "<a href='?acao=criar'><button  type='button' class='btn btn-info add-new'><i class='fa fa-plus'></i> Adicionar cliente</button></a> </div>";
-  
-
-    echo "<table class='table table-bordered'>";
-    echo "<thead>";
-          echo  "<tr>";
-          echo      "<th>Nome</th>";
-          echo      "<th>Email</th>";
-          echo      "<th>Ações</th>";
-        echo    "</tr>";
-      echo  "</thead>";
-     echo   "<tbody>";
-          require('cliente/lista.php');       
-      echo  "</tbody>";
-    echo "</table>";
+    
+     echo '
+     <body>
+      <div class="container-xl">
+	      <div class="table-responsive">
+		      <div class="table-wrapper">
+		      	<div class="table-title">
+				      <div class="row">
+					      <div class="col-sm-6">
+						      <h2>Gerenciar <b>Clientes</b></h2>
+				      	</div>
+				      	<div class="col-sm-6">
+						      <a href="?acao=criar" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Adicionar Cliente</span></a>						
+					      </div>
+              </div>
+		      	</div>
+			      <table class="table table-striped table-hover">
+				      <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Email</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+				      <tbody>';
+                require("cliente/lista.php");
+            echo '</table>
+          </div>
+        </div>
+      </div>
+    </body>
+     ';
 
       
     break;

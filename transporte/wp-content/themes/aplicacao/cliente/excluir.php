@@ -23,7 +23,9 @@ if(isset($_POST['id'] ) && !empty($_POST['id'])){
 
 global $wp;
 ?>
-
+<body>
+  
+<div class="signup-form">
 <form action="" method="POST">
 <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
 
@@ -32,3 +34,5 @@ global $wp;
     <a href="<?php echo home_url($wp->request) ?>?acao=home">NÃO</a>
     
 </form>
+</div> 
+</body>

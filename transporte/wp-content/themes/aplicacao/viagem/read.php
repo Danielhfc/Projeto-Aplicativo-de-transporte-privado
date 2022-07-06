@@ -22,6 +22,8 @@
           echo "<b>Data:</b> " . $row['data'] . "<br>";
           echo "<b>Comentario:</b> " . $row['destino'] . "<br>";
           echo "</p>";
+
+          
       } else echo 'error 1';
       
    }else echo 'error2';
