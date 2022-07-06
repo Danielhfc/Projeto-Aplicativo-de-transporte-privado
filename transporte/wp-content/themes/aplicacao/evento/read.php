@@ -1,6 +1,6 @@
 <?php 
   if(isset($_GET['id']) && !empty(trim($_GET['id']))){
-    $sql = "SELECT * FROM clientes WHERE id = ?";
+    $sql = "SELECT * FROM eventos WHERE id = ?";
 
     if($stmt = mysqli_prepare($con, $sql)){
       mysqli_stmt_bind_param($stmt, "i", $param_id);
@@ -25,17 +25,19 @@
                   <thead>
                     <tr>
                       <th>Nome</th>
-                      <th>Email</th>
-                      <th>Telefone</th>
-                      <th>CPF</th>
+                      <th>Endereco</th>
+                      <th>Data Inicial</th>
+                      <th>Data Final</th>
+                      <th>descricao</th>
                     </tr>
                   </thead>
                   <tbody>
                 <tr>
                   <td> '. $row["nome"] .' </td>
-                  <td> '. $row["email"] .' </td>
-                  <td> '. $row["telefone"] .' </td>
-                  <td> '. $row["cpf"] .' </td>
+                  <td> '. $row["endereco"] .' </td>
+                  <td> '. $row["data_inicio"] .' </td>
+                  <td> '. $row["data_final"] .' </td>
+                  <td> '. $row["descricao"] .' </td>
               </tr>
                 </table>
               </div>

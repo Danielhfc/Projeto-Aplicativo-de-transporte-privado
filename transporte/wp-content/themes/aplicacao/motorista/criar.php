@@ -37,8 +37,10 @@ mysqli_close($con);
 global $wp;
 ?>
 
-
+<body>
+<div class="signup-form">
 <form action="" method="POST">
+<h2>Registrar Motorista</h2>
     <div class="form-group">
         <label for="">Nome</label>
         <input type="text" name="nome" class="form-control" value="<?php echo $nome; ?>" required>
@@ -71,6 +73,10 @@ global $wp;
         <label for="">Placa do veículo</label>
         <input type="text" name="placa" class="form-control" value="<?php echo $placa; ?>" required>
     </div>
-    <input type="submit" value="Cadastrar">
-    <input type="hidden" name="cadastrar" value="1">
-</form>
+    <div class="form-group">
+            <button type="submit" value="Cadastrar" class="btn btn-success btn-lg btn-block">Cadastrar</button>
+        </div>
+      <input type="hidden" name="cadastrar" value="1">
+  </form>
+</div> 
+</body>

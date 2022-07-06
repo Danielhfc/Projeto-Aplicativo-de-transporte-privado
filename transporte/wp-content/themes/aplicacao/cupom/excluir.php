@@ -3,7 +3,7 @@
 if(isset($_POST['id'] ) && !empty($_POST['id'])){
   $id = $_POST['id'];
 
-  $sql = "DELETE FROM motoristas WHERE id=?";
+  $sql = "DELETE FROM cupons WHERE id=?";
 
   if($stmt = mysqli_prepare($con, $sql)){
     mysqli_stmt_bind_param($stmt, "i", $param_id);
@@ -23,7 +23,6 @@ if(isset($_POST['id'] ) && !empty($_POST['id'])){
 
 global $wp;
 ?>
-
 <body>
   
 <div class="signup-form">

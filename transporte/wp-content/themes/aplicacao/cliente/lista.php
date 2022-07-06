@@ -4,16 +4,18 @@ $sql = "SELECT * FROM clientes";
 if($result = mysqli_query($con, $sql)){
   if(mysqli_num_rows($result) > 0){
     while($row = mysqli_fetch_array($result)){
-      
-      echo "<tr>";
-      echo "<td>" . $row['nome'] . "</td>";
-      echo "<td>" . $row['email'] . "</td>";
-      echo "<td>";
-      echo "<a href='?acao=ver&id=" . $row['id'] . "'> Ver</a>";
-      echo "<a class='edit' title='Edit' data-toggle='tooltip' href='?acao=editar&id=" . $row['id'] . "'> <i class='material-icons'>&#xE254;</i></a>";
-      echo "<a class='delete' title='Delete' data-toggle='tooltip' href='?acao=excluir&id=" . $row['id'] . "'> <i class='material-icons'>&#xE872;</i></a>" . "<br>";
-      echo "</td>";
-      echo "</tr>";
+
+      echo '
+      <tr>
+        <td> '. $row["nome"] .' </td>
+        <td> '. $row["email"] .' </td>
+        <td>
+          <a href="?acao=ver&id='.$row['id'].'" class="ver" data-toggle="tooltip"><i class="material-icons" data-toggle="tooltip" title="Ver">&#xE8B6;</i></a>
+          <a href="?acao=editar&id= '.$row['id'].'" class="edit" data-toggle="tooltip"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+          <a href="?acao=excluir&id='.$row['id'].'" class="delete" data-toggle="tooltip"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+        </td>
+    </tr>
+      ';
     }
     
   }else echo 'error';

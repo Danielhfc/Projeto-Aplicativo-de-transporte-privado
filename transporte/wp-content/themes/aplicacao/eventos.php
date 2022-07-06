@@ -1,5 +1,5 @@
 <?php
-//Template Name: Clientes
+//Template Name: Eventos
 ?>
 
 <?php get_header(); ?>
@@ -15,18 +15,18 @@
 
   switch($_GET['acao']){
     case 'criar':
-      require('cliente/criar.php');
-    break;
-    case 'ver':
-      require('cliente/read.php');
+        require('evento/criar.php');
       break;
-    case 'editar':
-      require('cliente/editar.php');
-      break;
-    case 'excluir':
-      require('cliente/excluir.php');
-      break;
-    default:
+      case 'ver':
+        require('evento/read.php');
+        break;
+      case 'editar':
+        require('evento/editar.php');
+        break;
+      case 'excluir':
+        require('evento/excluir.php');
+        break;
+      default:
     
      echo '
      <body>
@@ -36,10 +36,10 @@
 		      	<div class="table-title">
 				      <div class="row">
 					      <div class="col-sm-6">
-						      <h2>Gerenciar <b>Clientes</b></h2>
+						      <h2>Gerenciar <b>Eventos</b></h2>
 				      	</div>
 				      	<div class="col-sm-6">
-						      <a href="?acao=criar" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Adicionar Cliente</span></a>						
+						      <a href="?acao=criar" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Adicionar Evento</span></a>						
 					      </div>
               </div>
 		      	</div>
@@ -47,12 +47,12 @@
 				      <thead>
                 <tr>
                   <th>Nome</th>
-                  <th>Email</th>
+                  <th>Local</th>
                   <th>Ações</th>
                 </tr>
               </thead>
 				      <tbody>';
-                require("cliente/lista.php");
+                require("evento/lista.php");
             echo '</table>
           </div>
         </div>

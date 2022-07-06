@@ -2,7 +2,7 @@
   "id": "07f2ff07-d186-401f-bca1-bb466a865e1e",
   "version": "2.0",
   "name": "crudes",
-  "url": "http://localhost/transporte/viagens/?acao=viagens",
+  "url": "http://localhost/transporte/cupom/?acao=cupom",
   "tests": [{
     "id": "a8e88d8b-4d1c-4575-8011-34dc3fc9265d",
     "name": "Crude Cliente",
@@ -1246,6 +1246,182 @@
         ["xpath=//a[contains(@href, '?acao=ver&id=2')]", "xpath:href"],
         ["xpath=//td[3]/a", "xpath:position"],
         ["xpath=//a[contains(.,'Ver')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "06bed55f-c57b-42fe-a26c-4b027aee1fc2",
+    "name": "CRUDE cupom",
+    "commands": [{
+      "id": "f8d950b4-4d08-4eec-ba95-1b0da07a5910",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/transporte/cupom/?acao=cupom",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "54b3d678-58f0-4bde-9c9a-d92d276e1d91",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b27c4ee2-9549-46b7-a604-d02f4885d96f",
+      "comment": "",
+      "command": "click",
+      "target": "css=span:nth-child(2)",
+      "targets": [
+        ["css=span:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Adicionar Cliente')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed2157aa-553c-407d-bbd4-8939678678dc",
+      "comment": "",
+      "command": "click",
+      "target": "name=nome",
+      "targets": [
+        ["name=nome", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='nome']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d9e9de6-5cc8-4a3e-9fa9-1a63ba2ccfda",
+      "comment": "",
+      "command": "type",
+      "target": "name=nome",
+      "targets": [
+        ["name=nome", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='nome']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "ECONOMIZE10"
+    }, {
+      "id": "26bd2fea-885b-404b-83f8-5ebfa06954e1",
+      "comment": "",
+      "command": "click",
+      "target": "name=valor",
+      "targets": [
+        ["name=valor", "name"],
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='valor']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d4bceb68-a078-4e86-ae2e-ba5cad9290cc",
+      "comment": "",
+      "command": "type",
+      "target": "name=valor",
+      "targets": [
+        ["name=valor", "name"],
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='valor']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "10%"
+    }, {
+      "id": "5817e17d-f4ef-4a80-81a3-8723e922f287",
+      "comment": "",
+      "command": "click",
+      "target": "name=quantidade",
+      "targets": [
+        ["name=quantidade", "name"],
+        ["css=.form-group:nth-child(4) > .form-control", "css:finder"],
+        ["xpath=//input[@name='quantidade']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eeebcb78-9bfe-4042-a1b0-680f6b734bdb",
+      "comment": "",
+      "command": "type",
+      "target": "name=quantidade",
+      "targets": [
+        ["name=quantidade", "name"],
+        ["css=.form-group:nth-child(4) > .form-control", "css:finder"],
+        ["xpath=//input[@name='quantidade']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "400"
+    }, {
+      "id": "df740fcd-0eb7-41cd-9321-b0f4d777cc50",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@value='Cadastrar']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Cadastrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d59fd4a7-9690-415d-942a-f7451ff84643",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cupom",
+      "targets": [
+        ["linkText=Cupom", "linkText"],
+        ["css=.nav-link:nth-child(7)", "css:finder"],
+        ["xpath=//a[contains(text(),'Cupom')]", "xpath:link"],
+        ["xpath=//li[@id='item-esq']/a[7]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'transporte/cupom?acao=cupom')]", "xpath:href"],
+        ["xpath=//a[7]", "xpath:position"],
+        ["xpath=//a[contains(.,'Cupom ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "76ff6c58-bedc-42ec-a98c-f9b0b57acf26",
+      "comment": "",
+      "command": "click",
+      "target": "css=.delete > .material-icons",
+      "targets": [
+        ["css=.delete > .material-icons", "css:finder"],
+        ["xpath=//td[4]/a/i", "xpath:position"],
+        ["xpath=//i[contains(.,'')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "013bdf85-47f2-4156-93b2-7d448fc57adc",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(3)",
+      "targets": [
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@value='SIM']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dfcc2bd4-4417-4d04-bfdd-bcbd273e1413",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(3)",
+      "targets": [
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@value='SIM']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed7308d3-5111-4d42-b6a3-ac2f230e2f6c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cupom",
+      "targets": [
+        ["linkText=Cupom", "linkText"],
+        ["css=.nav-link:nth-child(7)", "css:finder"],
+        ["xpath=//a[contains(text(),'Cupom')]", "xpath:link"],
+        ["xpath=//li[@id='item-esq']/a[7]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'transporte/cupom?acao=cupom')]", "xpath:href"],
+        ["xpath=//a[7]", "xpath:position"],
+        ["xpath=//a[contains(.,'Cupom ')]", "xpath:innerText"]
       ],
       "value": ""
     }]

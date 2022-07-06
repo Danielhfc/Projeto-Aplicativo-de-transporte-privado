@@ -31,28 +31,34 @@ mysqli_close($con);
 global $wp;
 ?>
 
-
-<form action="" method="POST">
-    <div class="form-group">
-        <label for="">Nome</label>
-        <input type="text" name="nome" class="form-control" value="<?php echo $nome; ?>" required>
-    </div>
-    <div class="form-group">
-        <label for="">Email</label>
-        <input type="email" name="email" class="form-control" value="<?php echo $email; ?>" required>
-    </div>
-    <div class="form-group">
-        <label for="">Telefone</label>
-        <input type="text" name="telefone" class="form-control" value="<?php echo $telefone; ?>" required>
-    </div>
-    <div class="form-group">
-        <label for="">CPF</label>
-        <input type="text" name="cpf" class="form-control" value="<?php echo $cpf; ?>" required>
-    </div>
-    <div class="form-group">
-        <label for="">Senha</label>
-        <input type="text" name="senha" class="form-control" value="<?php echo $senha; ?>" required>
-    </div>
-    <input type="submit" value="Cadastrar">
-    <input type="hidden" name="cadastrar" value="1">
-</form>
+<body>
+<div class="signup-form">
+  <form action="" method="POST">
+  <h2>Registrar Cliente</h2>
+      <div class="form-group">
+          <label for="">Nome</label>
+          <input type="text" name="nome" class="form-control" value="<?php echo $nome; ?>" required>
+      </div>
+      <div class="form-group">
+          <label for="">Email</label>
+          <input type="email" name="email" class="form-control" value="<?php echo $email; ?>" required>
+      </div>
+      <div class="form-group">
+          <label for="">Telefone</label>
+          <input type="text" name="telefone" class="form-control" value="<?php echo $telefone; ?>" required>
+      </div>
+      <div class="form-group">
+          <label for="">CPF</label>
+          <input type="text" name="cpf" class="form-control" value="<?php echo $cpf; ?>" required>
+      </div>
+      <div class="form-group">
+          <label for="">Senha</label>
+          <input type="text" name="senha" class="form-control" value="<?php echo $senha; ?>" required>
+      </div>
+      <div class="form-group">
+            <button type="submit" value="Cadastrar" class="btn btn-success btn-lg btn-block">Cadastrar</button>
+        </div>
+      <input type="hidden" name="cadastrar" value="1">
+  </form>
+</div> 
+</body>
