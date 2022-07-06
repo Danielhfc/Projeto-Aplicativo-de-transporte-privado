@@ -2,7 +2,7 @@
   "id": "07f2ff07-d186-401f-bca1-bb466a865e1e",
   "version": "2.0",
   "name": "crudes",
-  "url": "http://localhost/transporte/cupom/?acao=cupom",
+  "url": "http://localhost/transporte/eventos/?acao=eventos",
   "tests": [{
     "id": "a8e88d8b-4d1c-4575-8011-34dc3fc9265d",
     "name": "Crude Cliente",
@@ -1422,6 +1422,246 @@
         ["xpath=//a[contains(@href, 'transporte/cupom?acao=cupom')]", "xpath:href"],
         ["xpath=//a[7]", "xpath:position"],
         ["xpath=//a[contains(.,'Cupom ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "c59f2935-6f27-4d8b-b0fa-70605bc32a3b",
+    "name": "CRUDE Evento",
+    "commands": [{
+      "id": "e680135d-c5f1-4b57-bd00-61d9ace2d83d",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/transporte/eventos/?acao=eventos",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fc812a3e-643c-4284-a658-a4bcda0c3ecf",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4ec327f7-9615-4e58-9488-e453812a0846",
+      "comment": "",
+      "command": "click",
+      "target": "css=span:nth-child(2)",
+      "targets": [
+        ["css=span:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Adicionar Evento')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c72bd24-bef2-4cf5-ac6c-3081456b91aa",
+      "comment": "",
+      "command": "click",
+      "target": "name=nome",
+      "targets": [
+        ["name=nome", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='nome']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c74f0f3-3516-46d4-8723-833620db76a9",
+      "comment": "",
+      "command": "type",
+      "target": "name=nome",
+      "targets": [
+        ["name=nome", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='nome']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Festa"
+    }, {
+      "id": "bf4e80c1-b910-4fa6-be3a-838ade921de0",
+      "comment": "",
+      "command": "click",
+      "target": "name=endereco",
+      "targets": [
+        ["name=endereco", "name"],
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='endereco']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "625669a0-9417-414a-8dab-eb891b99bff6",
+      "comment": "",
+      "command": "type",
+      "target": "name=endereco",
+      "targets": [
+        ["name=endereco", "name"],
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='endereco']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Rua Oscar Rennó"
+    }, {
+      "id": "d12e20e9-1f9e-4ca3-9e0e-237344f7bd98",
+      "comment": "",
+      "command": "click",
+      "target": "name=data_inicio",
+      "targets": [
+        ["name=data_inicio", "name"],
+        ["css=.form-group:nth-child(4) > .form-control", "css:finder"],
+        ["xpath=//input[@name='data_inicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "12d0d3b3-11bb-4002-974a-dadd7e432115",
+      "comment": "",
+      "command": "type",
+      "target": "name=data_inicio",
+      "targets": [
+        ["name=data_inicio", "name"],
+        ["css=.form-group:nth-child(4) > .form-control", "css:finder"],
+        ["xpath=//input[@name='data_inicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "09/07/2022"
+    }, {
+      "id": "4d5328ce-2a28-4280-a281-adde8bc3bb13",
+      "comment": "",
+      "command": "click",
+      "target": "name=data_final",
+      "targets": [
+        ["name=data_final", "name"],
+        ["css=.form-group:nth-child(5) > .form-control", "css:finder"],
+        ["xpath=//input[@name='data_final']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dfe74f35-3d44-42fd-a4e3-c86cd6d15b09",
+      "comment": "",
+      "command": "type",
+      "target": "name=data_final",
+      "targets": [
+        ["name=data_final", "name"],
+        ["css=.form-group:nth-child(5) > .form-control", "css:finder"],
+        ["xpath=//input[@name='data_final']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "11/07/2022"
+    }, {
+      "id": "f8dbce54-1d6b-41a6-b0cb-8418c70bc6bd",
+      "comment": "",
+      "command": "click",
+      "target": "name=descricao",
+      "targets": [
+        ["name=descricao", "name"],
+        ["css=.form-group:nth-child(6) > .form-control", "css:finder"],
+        ["xpath=//input[@name='descricao']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ffee9f8c-e7b0-46b6-8e1c-8525ae1359b6",
+      "comment": "",
+      "command": "type",
+      "target": "name=descricao",
+      "targets": [
+        ["name=descricao", "name"],
+        ["css=.form-group:nth-child(6) > .form-control", "css:finder"],
+        ["xpath=//input[@name='descricao']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": "festao"
+    }, {
+      "id": "322480f0-ec1a-4be4-b1fa-38212296e0d1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@value='Cadastrar']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Cadastrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "afadc072-2734-47dd-9c34-735264837d42",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Eventos",
+      "targets": [
+        ["linkText=Eventos", "linkText"],
+        ["css=.nav-link:nth-child(8)", "css:finder"],
+        ["xpath=//a[contains(text(),'Eventos')]", "xpath:link"],
+        ["xpath=//li[@id='item-esq']/a[8]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'transporte/eventos?acao=eventos')]", "xpath:href"],
+        ["xpath=//a[8]", "xpath:position"],
+        ["xpath=//a[contains(.,'Eventos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ebbcee31-7162-4468-907f-35cbe92c2ce5",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(2) .ver > .material-icons",
+      "targets": [
+        ["css=tr:nth-child(2) .ver > .material-icons", "css:finder"],
+        ["xpath=//tr[2]/td[3]/a/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e2d7bdfd-a67c-4786-83ff-52ee13d5aa59",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Eventos",
+      "targets": [
+        ["linkText=Eventos", "linkText"],
+        ["css=.nav-link:nth-child(8)", "css:finder"],
+        ["xpath=//a[contains(text(),'Eventos')]", "xpath:link"],
+        ["xpath=//li[@id='item-esq']/a[8]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'transporte/eventos?acao=eventos')]", "xpath:href"],
+        ["xpath=//a[8]", "xpath:position"],
+        ["xpath=//a[contains(.,'Eventos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d16081d2-c816-4905-8d23-92c3e2e62f03",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=",
+      "targets": [
+        ["linkText=", "linkText"],
+        ["css=tr:nth-child(1) .delete", "css:finder"],
+        ["xpath=//a[contains(@href, '?acao=excluir&id=2')]", "xpath:href"],
+        ["xpath=//td[3]/a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d203c23-a511-4d8a-8022-8a96c7744ef1",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(3)",
+      "targets": [
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@value='SIM']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5570769-68d4-405d-8408-d9cf896cfba1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Eventos",
+      "targets": [
+        ["linkText=Eventos", "linkText"],
+        ["css=.nav-link:nth-child(8)", "css:finder"],
+        ["xpath=//a[contains(text(),'Eventos')]", "xpath:link"],
+        ["xpath=//li[@id='item-esq']/a[8]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'transporte/eventos?acao=eventos')]", "xpath:href"],
+        ["xpath=//a[8]", "xpath:position"],
+        ["xpath=//a[contains(.,'Eventos')]", "xpath:innerText"]
       ],
       "value": ""
     }]
