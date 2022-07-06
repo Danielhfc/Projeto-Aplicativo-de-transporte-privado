@@ -33,7 +33,7 @@
 						      <h2>Gerenciar <b>Cupons</b></h2>
 				      	</div>
 				      	<div class="col-sm-6">
-						      <a href="?acao=criar" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Adicionar Cliente</span></a>						
+						      <a href="?acao=criar" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Adicionar Cupom</span></a>						
 					      </div>
               </div>
 		      	</div>

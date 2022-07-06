@@ -15,12 +15,18 @@
 
   switch($_GET['acao']){
     case 'criar':
-      require('cupom/criar.php');
-    break;
-    case 'excluir':
-      require('cupom/excluir.php');
+        require('evento/criar.php');
       break;
-    default:
+      case 'ver':
+        require('evento/read.php');
+        break;
+      case 'editar':
+        require('evento/editar.php');
+        break;
+      case 'excluir':
+        require('evento/excluir.php');
+        break;
+      default:
     
      echo '
      <body>
@@ -33,7 +39,7 @@
 						      <h2>Gerenciar <b>Eventos</b></h2>
 				      	</div>
 				      	<div class="col-sm-6">
-						      <a href="?acao=criar" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Adicionar Cliente</span></a>						
+						      <a href="?acao=criar" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Adicionar Evento</span></a>						
 					      </div>
               </div>
 		      	</div>
@@ -41,13 +47,12 @@
 				      <thead>
                 <tr>
                   <th>Nome</th>
-                  <th>Valor</th>
-                  <th>Quantidade</th>
+                  <th>Local</th>
                   <th>Ações</th>
                 </tr>
               </thead>
 				      <tbody>';
-                require("cupom/lista.php");
+                require("evento/lista.php");
             echo '</table>
           </div>
         </div>
