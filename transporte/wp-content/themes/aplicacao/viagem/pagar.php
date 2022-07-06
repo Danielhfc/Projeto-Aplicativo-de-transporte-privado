@@ -35,7 +35,9 @@ mysqli_close($con);
 global $wp;
 ?>
 
-
+<body>
+  
+<div class="signup-form">
 <form action="" method="POST">
     <div class="form-group">
         <label for="">Cliente</label>
@@ -65,6 +67,10 @@ global $wp;
         <label for="">Valor</label>
         <input type="text" name="valor" class="form-control" value="<?php echo $valor; ?>" >
     </div>
-    <input type="submit" value="Cadastrar">
-    <input type="hidden" name="Pagar" value="1">
-</form>
+    <div class="form-group">
+            <button type="submit" value="Cadastrar" class="btn btn-success btn-lg btn-block">Pagar</button>
+        </div>
+      <input type="hidden" name="cadastrar" value="1">
+  </form>
+</div> 
+</body>

@@ -65,7 +65,8 @@ if(isset($_POST['id'] ) && !empty($_POST['id'])){
 global $wp;
 ?>
 
-
+<body>
+<div class="signup-form">
 <form action="" method="POST">
     <div class="form-group">
         <label for="">Nome</label>
@@ -91,6 +92,9 @@ global $wp;
         <label for="">Placa do veículo</label>
         <input type="text" name="placa" class="form-control" value="<?php echo $placa; ?>" required>
     </div>
-    <input type="submit" value="Editar">
+    <div class="form-group">
+            <button type="submit" value="Cadastrar" class="btn btn-success btn-lg btn-block">Editar</button>
+        </div>
     <input type="hidden" name="id" value="<?php echo $id; ?>">
-</form>
+</form></div> 
+</body>

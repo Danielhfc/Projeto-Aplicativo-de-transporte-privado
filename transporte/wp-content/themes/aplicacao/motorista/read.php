@@ -13,15 +13,44 @@
         if(mysqli_num_rows($result) == 1){
           $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-          echo "<p>";
-          echo "<b>Nome:</b> " . $row['nome'] . "<br>";
-          echo "<b>Email:</b> " . $row['email'] . "<br>";
-          echo "<b>Telefone:</b> " . $row['telefone'] . "<br>";
-          echo "<b>CNH:</b> " . $row['cnh'] . "<br>";
-          echo "<b>Nascimento:</b> " . $row['nascimento'] . "<br>";
-          echo "<b>Veículo:</b> " . $row['veiculo'] . "<br>";
-          echo "<b>Placa do veículo:</b> " . $row['placa'] . "<br>";
-          echo "</p>";
+         
+
+          echo'
+          <body>
+          <div class="container-xl">
+            <div class="table-responsive">
+              <div class="table-wrapper">
+                <div class="table-title">
+                  
+                </div>
+                <table class="table table-striped table-hover">
+                  <thead>
+                    <tr>
+                      <th>Nome</th>
+                      <th>Email</th>
+                      <th>Telefone</th>
+                      <th>CNH</th>
+                      <th>Nascimento</th>
+                      <th>Veículo</th>
+                      <th>Placa</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                <tr>
+                  <td> '. $row["nome"] .' </td>
+                  <td> '. $row["email"] .' </td>
+                  <td> '. $row["telefone"] .' </td>
+                  <td> '. $row["cnh"] .' </td>
+                  <td> '. $row["nascimento"] .' </td>
+                  <td> '. $row["veiculo"] .' </td>
+                  <td> '. $row["placa"] .' </td>
+              </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </body>
+          ';
       } else echo 'error 1';
       
    }else echo 'error2';

@@ -19,18 +19,37 @@
       break;
     default: 
 
-    echo "<table class='table table-bordered'>";
-    echo "<thead>";
-          echo  "<tr>";
-          echo      "<th>Viagem</th>";
-          echo      "<th>Valor</th>";
-          echo      "<th>Ações</th>";
-        echo    "</tr>";
-      echo  "</thead>";
-     echo   "<tbody>";
-          require('pagamentos/lista.php');       
-      echo  "</tbody>";
-    echo "</table>";
+    echo '
+     <body>
+      <div class="container-xl">
+	      <div class="table-responsive">
+		      <div class="table-wrapper">
+		      	<div class="table-title">
+				      <div class="row">
+					      <div class="col-sm-6">
+						      <h2>Gerenciar <b>Pagamentos</b></h2>
+				      	</div>
+				      	<div class="col-sm-6">
+						      <a href="?acao=criar" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Adicionar Cliente</span></a>						
+					      </div>
+              </div>
+		      	</div>
+			      <table class="table table-striped table-hover">
+				      <thead>
+                <tr>
+                  <th>Viagem</th>
+                  <th>Valor</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+				      <tbody>';
+                require("pagamentos/lista.php");
+            echo '</table>
+          </div>
+        </div>
+      </div>
+    </body>
+     ';
 
       
     break;
